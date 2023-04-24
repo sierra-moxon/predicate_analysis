@@ -46,13 +46,15 @@ def main():
     semmeddb_triples = parse_downloads_file("semmeddb.txt")
     umls_lookup = download_and_parse_umls_types_file("SemanticTypes_2018AB.txt.1")
     category_map = get_biolink_categories(umls_lookup)
+    output = open("semmeddb_biolink_triples.tsv", "w")
+    tsv_writer = csv.writer(output, delimiter='\t')
     for triple in semmeddb_triples:
         print(triple)
         print("subject", category_map.get(triple[1]))
         print("object", category_map.get(triple[2]))
         predicate_name = tk.get_element("biolink:"+triple[0])
         if predicate_name is not None:
-            print("predicate", predicate_name.name)
+            row =
         else:
             print("predicate not found", triple[0])
 
