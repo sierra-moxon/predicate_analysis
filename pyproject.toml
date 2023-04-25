@@ -8,7 +8,7 @@ authors = ["Sierra Taylor Moxon <sierra.taylor@gmail.com>"]
 python = "^3.9"
 requests = "^2.26.0"
 jsonschema = "^4.3.1"
-bmt = "^1.0.11"
+bmt = "^1.0.12"
 oaklib = "^0.5.3"
 
 [tool.poetry.dev-dependencies]

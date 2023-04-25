@@ -3248,7 +3248,7 @@ testing = ["big-O", "flake8 (<5)", "jaraco.functools", "jaraco.itertools", "more
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.9"
-content-hash = "16d2420144e45d22dfc0e3deeed4be34697a6700f6062b9e673c575ab8de30a4"
+content-hash = "096ee3da7c8ea5fcab50645cef618606a56c6a408b8f7a772bb6b15cf2838663"
 
 [metadata.files]
 aiohttp = [
