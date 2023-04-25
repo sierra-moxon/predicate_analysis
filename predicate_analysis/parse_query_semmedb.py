@@ -50,11 +50,12 @@ def main():
     tsv_writer = csv.writer(output, delimiter='\t')
     for triple in semmeddb_triples:
         print(triple)
-        print("subject", category_map.get(triple[1]))
-        print("object", category_map.get(triple[2]))
+        subject = category_map.get(triple[1])
+        p_object = category_map.get(triple[2])
         predicate_name = tk.get_element("biolink:"+triple[0])
         if predicate_name is not None:
-            row =
+            if tk.validate_edge(subject, predicate_name, p_object):
+                print("valid edge", subject, predicate_name, p_object)
         else:
             print("predicate not found", triple[0])
 
