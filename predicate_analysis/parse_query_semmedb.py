@@ -56,6 +56,8 @@ def main():
         if predicate_name is not None:
             if tk.validate_edge(subject, predicate_name, p_object):
                 print("valid edge", subject, predicate_name, p_object)
+            else:
+                print("invalid edge", subject, predicate_name, p_object)
         else:
             print("predicate not found", triple[0])
 
