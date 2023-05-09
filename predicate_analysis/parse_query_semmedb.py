@@ -105,12 +105,12 @@ def main():
             if tk.validate_edge(subject, predicate, p_object):
                 # print("valid edge", subject, predicate, p_object)
                 output = (triple[3], triple[1], triple[6], triple[0], triple[2], triple[7], subject,
-                          predicate, p_object, "None", "True")
+                          predicate, p_object, "", "True")
                 csv_writer.writerow(output)
             else:
                 # print("invalid edge", subject, predicate, p_object)
                 output = (triple[3], triple[1], triple[6], triple[0], triple[2], triple[7], subject,
-                          predicate, p_object, "None", "False")
+                          predicate, p_object, "", "False")
                 csv_writer.writerow(output)
         else:
             # print("subject or object or predicate not found")

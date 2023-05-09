@@ -159,28 +159,18 @@ web = ["bootstrap-flask (<=2.0.0)", "flasgger", "flask", "markdown", "pyyaml", "
 
 [[package]]
 name = "bmt"
-version = "0.0.0"
+version = "1.0.13"
 description = "Biolink Model Toolkit: A Python API for working with the Biolink Model"
 category = "main"
 optional = false
-python-versions = "^3.9"
-develop = false
+python-versions = ">=3.9,<4.0"
 
 [package.dependencies]
-deprecation = "^2.1.0"
-linkml-runtime = "^1.5.0"
-oaklib = "^0.5.1"
-recommonmark = "^0.7.1"
-stringcase = "^1.2.0"
-
-[package.extras]
-docs = []
-
-[package.source]
-type = "git"
-url = "https://github.com/biolink/biolink-model-toolkit.git"
-reference = "validate_edge"
-resolved_reference = "3572385c700b46795ddbce1850ac652f710c29eb"
+deprecation = ">=2.1.0,<3.0.0"
+linkml-runtime = ">=1.5.0,<2.0.0"
+oaklib = ">=0.5.1,<0.6.0"
+recommonmark = ">=0.7.1,<0.8.0"
+stringcase = ">=1.2.0,<2.0.0"
 
 [[package]]
 name = "certifi"
@@ -2350,7 +2340,7 @@ testing = ["big-O", "flake8 (<5)", "jaraco.functools", "jaraco.itertools", "more
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.9"
-content-hash = "9fe9aa706a12e4153ddb8c32a0562b1ebea401f659b442028d546d42e28500e0"
+content-hash = "e30e2fc0b716abd437cd051e2fdd3208633f53b87952bcb9750bc70ae04d6cda"
 
 [metadata.files]
 aiohttp = [
@@ -2489,7 +2479,10 @@ bioregistry = [
     {file = "bioregistry-0.6.99-py3-none-any.whl", hash = "sha256:7c30edaea11cbed1e13f64ba1debdabc12b65b70c0bc2d904b8b2ed692b9a404"},
     {file = "bioregistry-0.6.99.tar.gz", hash = "sha256:22bc981f39c5aaa1a5430d695728a6dade6edcbfb0abbc2e42b4013a9fe4102b"},
 ]
-bmt = []
+bmt = [
+    {file = "bmt-1.0.13-py3-none-any.whl", hash = "sha256:16d727ea0203c74f721daa0a99e906b9fb4cead54e96f20f64bc142e6e06c768"},
+    {file = "bmt-1.0.13.tar.gz", hash = "sha256:61ed902b4995885656a7587ae1e4c99ddf024e434a4f9c1bcac45c37fb8456a0"},
+]
 certifi = [
     {file = "certifi-2022.12.7-py3-none-any.whl", hash = "sha256:4ad3232f5e926d6718ec31cfc1fcadfde020920e278684144551c91769c7bc18"},
     {file = "certifi-2022.12.7.tar.gz", hash = "sha256:35824b4c3a97115964b408844d64aa14db1cc518f6562e8d7261699d1350a9e3"},
