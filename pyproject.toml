@@ -9,7 +9,7 @@ python = "^3.9"
 requests = "^2.28.2"
 jsonschema = "^4.3.1"
 oaklib = "^0.5.3"
-bmt = { git = "https://github.com/biolink/biolink-model-toolkit.git", branch = "validate_edge" }
+bmt = "^1.0.13"
 
 
 [tool.poetry.dev-dependencies]
