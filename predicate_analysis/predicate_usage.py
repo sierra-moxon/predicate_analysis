@@ -34,17 +34,24 @@ def main():
                 response = requests.get(metakg_url)
                 if response.status_code == 200:
                     print(hit.get('info').get('title') + ": " + metakg_url)
+                    edges_per_url = {}
                     for id in predicates_to_test:
-                        retrieved_edge = {}
+                        edges_per_id = {}
                         for edge in response.json().get("edges"):
                             if edge.get("predicate") == id:
-                                retrieved_edge[metakg_url] = edge
-                                collected_edges.append(retrieved_edge)
+                                # map of edges per predicate for a source
+                                edges_per_id[id].append(edge)
+                        # map of metakg to edges per predicate map
+                        if edges_per_id != {}:
+                            edges_per_url[metakg_url].append(edges_per_id)
+                        # list of all metakgs and their edges
+                        if edges_per_url != {}:
+                            collected_edges.append(edges_per_url)
             except Exception as e:
                 continue
     # print(info)
     with open("edges_using_predicates.json", 'w') as f:
-        json.dump(collected_edges, f)
+        json.dump(collected_edges, f, indent=4)
     return smartapi_docs
 
 
